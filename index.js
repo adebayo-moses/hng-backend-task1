@@ -8,7 +8,7 @@ app.use(cors());
 
 const bio = {
   slackUsername: 'Max',
-  backend: 'true',
+  backend: true,
   age: 23,
   bio: "I'm a software developer with vast experience in building scalable web applications.",
 };
