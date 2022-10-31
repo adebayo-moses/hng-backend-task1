@@ -14,11 +14,12 @@ const bio = {
 };
 
 app.get('/', (req, res) => {
-  res.json({});
+  res.json(bio);
 });
-const server = app.listen(port, () =>
-  console.log(`Task 1 listening on port ${port}!`)
-);
+
+const server = app.listen(port, () => {
+  console.log(`Task 1 listening on port ${port}!`);
+});
 
 server.setTimeout(10000, (socket) => {
   console.log('Opps timeout buddy.');
