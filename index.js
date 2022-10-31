@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -12,3 +13,8 @@ app.get('/', (req, res) => {
   });
 });
 app.listen(port, () => console.log(`Task 1 listening on port ${port}!`));
+
+server.setTimeout(10000, (socket) => {
+  console.log('Opps timeout buddy.');
+  socket.destroy();
+});
